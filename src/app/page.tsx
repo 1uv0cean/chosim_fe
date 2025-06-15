@@ -1,3 +1,6 @@
+"use client";
+import Link from "next/link";
+
 const Home = () => {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -8,12 +11,11 @@ const Home = () => {
         <p className="text-[16px] sm:text-[20px] text-center">
           이곳은 초심을 잃지 않기 위한 공간입니다.
         </p>
-        <a
-          href="/write"
-          className="px-6 py-3 bg-white text-black rounded-lg hover:bg-black hover:text-white transition-colors"
-        >
-          초심 찾기
-        </a>
+        <Link href="/write">
+          <button className="w-full sm:w-auto text-base px-3 py-1.5 rounded-lg bg-black text-white shadow-md hover:bg-gray-500 hover:shadow-lg cursor-pointer">
+            초심 찾기
+          </button>
+        </Link>
       </main>
     </div>
   );
